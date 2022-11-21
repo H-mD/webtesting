@@ -18,7 +18,10 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 100px;
+    padding-top: 71px;
+    padding-bottom: 30px;
+    padding-left: 47px;
+    padding-right: 123px;
     box-sizing: border-box;
     position: sticky;
     top: 0;
@@ -99,6 +102,122 @@ section{
     line-height: 34px;
     text-align: center;
     color: #FFFFFF;
+}
+
+/* articles section */
+.articles .container{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: fit-content;
+}
+
+.arrow{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.articles #left{
+    content: url('src/LeftArrow.png');
+}
+
+input[type="checkbox"]#left{
+    content: url('src/LeftArrow.png');
+    display: block;
+    -webkit-appearance: none;
+}
+
+/* input[type="checkbox"]#left:active{
+    border-left: 3px solid #FCC72A;
+} */
+
+input[type="checkbox"]#left:checked{
+    content: url('src/LeftArrrowSelected.png');
+}
+
+input[type="checkbox"]#right{
+    content: url('src/RightArrow.png');
+    display: block;
+    -webkit-appearance: none;
+}
+
+/* input[type="checkbox"]#right:active{
+    border-right: 3px solid #FCC72A;
+} */
+
+input[type="checkbox"]#right:checked{
+    content: url('src/RightArrowSelected.png');
+}
+
+/* input[type="checkbox"]#left:checked ~ input[type="checkbox"]#right{
+    content: url('src/RightArrow.png');
+} */
+
+/* input[type="checkbox"]#right:checked ~ input[type="checkbox"]#left{
+    content: url('src/LeftArrow.png');
+} */
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards li{
+    padding: 50px 50px;
+    border-radius: 27px;
+    position: relative;
+    list-style: none;
+}
+
+.cards h2{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+}
+
+.cards h4{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.cards h3{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: justify;
+}
+
+.cards a{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: justify;
+    color: #FCC72A;
+}
+
+.cards a:hover{
+    color: #1E1E1E;
+}
+
+.cards span{
+    color: #FCC72A;
+}
+
+.fotografi{
+    background-color: #18171C;
+}
+
+.jurnalistik{
+    background-color: #18171C;
+}
+
+.desain{
+    background-color: #18171C;
 }
 
 /* about section */
@@ -196,4 +315,81 @@ img[src="src/Rectangle.png"]{
 .footer a{
     padding: 15px;
     color: white;
+}
+
+/* articles page section */
+
+.main{
+    /* padding-left: 56px;
+    padding-right: 201px; */
+    padding-bottom: 199px;
+}
+
+.main .container{
+    padding: 500px 100px;
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+    position: relative;
+    height: 90vh;
+}
+
+.isi_artikel{
+    position: relative;
+    width: 76%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.isi_artikel h1{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    width: 648px;
+}
+
+.isi_artikel span{
+    color: #FCC72A;
+}
+
+.isi_artikel h4{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    width: 155px;
+    height: 24px;
+}
+
+.paragraph{
+    height: 516px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.isi_artikel p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: justify;
+}
+
+.image_div{
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 38px;
+}
+
+.main .container .image{
+    display: flex;
+    align-content: center;
+    background-color: #FF407C;
+    border-radius: 27px;
+    width: 313px;
+    height: 480px;
+    top: 100%;
+    bottom: 10%;
 }
