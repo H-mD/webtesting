@@ -13,21 +13,21 @@
   </head>
   <body>
     <nav class="navbar">
-          <div class="navbar_title" id="item">
-            <img src="src/Exclude.png" alt="logo">
-            <a href="#home">TCorner!</a>
+      <div class="navbar_title" id="item">
+        <img src="src/Exclude.png" alt="logo">
+        <a href="#home">TCorner!</a>
+      </div>
+      <div class="menu" id="item">
+          <div class="items">
+            <a href="#home">Home</a>
           </div>
-          <div class="menu" id="item">
-              <div class="items">
-                <a href="#home">Home</a>
-              </div>
-              <div class="items">
-                <a href="#articles">Articles</a>
-              </div>
+          <div class="items">
+            <a href="#articles">Articles</a>
           </div>
-          <div class="navbar__btn" id="item">
-            <a href="#about">About</a>
-          </div>
+      </div>
+      <div class="navbar__btn" id="item">
+        <a href="#about">About</a>
+      </div>
     </nav>
     <section class="hero" id="home">
       <div class="container">
@@ -40,35 +40,44 @@
         <div class="arrow">
           <!-- <a href="/" id="left"></a>
           <a href="/" id="right"></a> -->
-          <a href="."><input type="checkbox" id="left"></a>
+          <input type="checkbox" id="left">
           <input type="checkbox" id="right">
         </div>
-        <ul class="cards">
-          <li class="fotografi">
-            <h2>Beginilah hasil <span>Fotografi</span> yang sampah</h2>
-            <h4>oleh Aryanarto Sarno, C25</h4>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Donec eleifend nibh id venenatis porttitor. Nam vehicula ipsum 
-              et lectus fringilla, nec volutpat ligula consectetur.</h3>
-            <a href="articles/photography.html">Read More <img src="src/SmallArrow.png" alt="SmallArrow"></a>
-          </li>
-          <li class="jurnalistik">
-            <h2>Beginilah kriteria <span>Jurnalistik</span> yang sampah</h2>
-            <h4>oleh Aryanarto Sarno, C25</h4>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Donec eleifend nibh id venenatis porttitor. Nam vehicula ipsum 
-              et lectus fringilla, nec volutpat ligula consectetur.</h3>
-              <a href="articles/jurnalistic.html">Read More <img src="src/SmallArrow.png" alt="SmallArrow"></a>
-          </li>
-          <li class="desain">
-            <h2>Beginilah kriteria <span>Desain</span> yang sampah</h2>
-            <h4>oleh Aryanarto Sarno, C25</h4>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Donec eleifend nibh id venenatis porttitor. Nam vehicula ipsum 
-              et lectus fringilla, nec volutpat ligula consectetur.</h3>
-            <a href="articles/design.html">Read More <img src="src/SmallArrow.png" alt="SmallArrow"></a>
-          </li>
-        </ul>
+        <div class="cards">
+          <a href="articles/photography.html">
+            <div class="fotografi" id="li">
+             <h2>Beginilah hasil <span>Fotografi</span> yang sampah</h2>
+             <h4>oleh Aryanarto Sarno, C25</h4>
+             <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+               Donec eleifend nibh id venenatis porttitor. Nam vehicula ipsum 
+               et lectus fringilla, nec volutpat ligula consectetur.</h3>
+             <div id="rm">Read More <div id="gams"></div></div>
+             </div>
+          </a>
+          <a href="articles/jurnalistic.html">
+            <div class="jurnalistik" id="li">
+             <h2>Beginilah kriteria <span>Jurnalistik</span> yang sampah</h2>
+             <h4>oleh Aryanarto Sarno, C25</h4>
+             <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+               Donec eleifend nibh id venenatis porttitor. Nam vehicula ipsum 
+               et lectus fringilla, nec volutpat ligula consectetur.</h3>
+              <div id="rm">Read More <div id="gams"></div></div>
+            </div>
+          </a>
+          <a href="articles/design.html">
+            <div class="desain" id="li">
+              <h2>Beginilah kriteria <span>Desain</span> yang sampah</h2>
+              <h4>oleh Aryanarto Sarno, C25</h4>
+              <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Donec eleifend nibh id venenatis porttitor. Nam vehicula ipsum 
+                et lectus fringilla, nec volutpat ligula consectetur.</h3>
+              <div id="rm">Read More <div id="gams"></div></div>
+            </div>
+          </a>
+        </div>
+        <!-- <div>
+
+        </div> -->
       </div>
     </section>
     <section class="about" id="about">
@@ -110,5 +119,6 @@
         </div>
       </div>
     </section>
+    <script src="app.js"></script>
   </body>
 </html>

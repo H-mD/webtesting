@@ -1,9 +1,12 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     padding: 0;
     background-color: #1E1E1E;
     font-family: "Inter";
-    scroll-behavior: smooth;
 }
 
 
@@ -50,11 +53,13 @@ a {
 .items{
     width: 100px;
     display: inline;
+    transition: all ease-out 250ms;
+    transform:rotate(270deg);
 }
 
-.items:hover{
+/* .items:hover{
     border-bottom: 3px solid #FCC72A;
-}
+} */
 
 .items:checked{
     border-bottom: 3px solid #FCC72A;
@@ -69,6 +74,10 @@ a {
     background-color: #FF7CA5;
 }
 
+.active{
+    border-bottom: 3px solid #FCC72A;
+}
+
 /* main section */
 section{
     position: relative;
@@ -77,7 +86,7 @@ section{
     align-items: center;
     height: 100vh;
     width: 100%;
-    color: white;
+    color: #FFFFFF;
     background-color: #1E1E1E;
 }
 
@@ -108,13 +117,15 @@ section{
 .articles .container{
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 90%;
     height: fit-content;
+    justify-content: center;
 }
 
 .arrow{
     display: flex;
     justify-content: flex-end;
+    height: 96px;
 }
 
 .articles #left{
@@ -125,6 +136,8 @@ input[type="checkbox"]#left{
     content: url('src/LeftArrow.png');
     display: block;
     -webkit-appearance: none;
+    width: 85px;
+    height: 39px;
 }
 
 /* input[type="checkbox"]#left:active{
@@ -139,6 +152,8 @@ input[type="checkbox"]#right{
     content: url('src/RightArrow.png');
     display: block;
     -webkit-appearance: none;
+    width: 85px;
+    height: 39px;
 }
 
 /* input[type="checkbox"]#right:active{
@@ -162,11 +177,13 @@ input[type="checkbox"]#right:checked{
     justify-content: space-between;
 }
 
-.cards li{
+.cards #li{
     padding: 50px 50px;
     border-radius: 27px;
     position: relative;
     list-style: none;
+    width: 468px;
+    height: 419px;
 }
 
 .cards h2{
@@ -191,7 +208,7 @@ input[type="checkbox"]#right:checked{
     text-align: justify;
 }
 
-.cards a{
+#rm{
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -200,24 +217,39 @@ input[type="checkbox"]#right:checked{
     color: #FCC72A;
 }
 
-.cards a:hover{
-    color: #1E1E1E;
-}
-
 .cards span{
     color: #FCC72A;
 }
 
-.fotografi{
+.cards #li{
     background-color: #18171C;
+    color: #FFFFFF;
 }
 
-.jurnalistik{
-    background-color: #18171C;
+.cards #li:hover{
+    background-color: #FF407C;
 }
 
-.desain{
-    background-color: #18171C;
+.cards #li:hover > #rm{
+    color: #1E1E1E;
+}
+
+.cards #li #rm{
+    display: flex;
+}
+
+.cards #li #rm #gams{
+    content: url('src/SmallArrow.png');
+    height: 9px;
+    padding-top: 8px;
+    padding-left: 12px;
+}
+
+.cards #li:hover > #rm > #gams{
+    content: url('src/SmallArrowSelected.png');
+    height: 9px;
+    padding-top: 8px;
+    padding-left: 12px;
 }
 
 /* about section */
@@ -320,26 +352,35 @@ img[src="src/Rectangle.png"]{
 /* articles page section */
 
 .main{
-    /* padding-left: 56px;
-    padding-right: 201px; */
-    padding-bottom: 199px;
+    align-items: flex-start;
 }
 
-.main .container{
-    padding: 500px 100px;
+/* #main_container{
     display: flex;
     justify-content: space-between;
     color: #FFFFFF;
+    /* overflow-y: scroll; */
+    /* background-color: yellow; */
+    /* position: absolute; */
+    /* height: 90vh; */
+/* } */
+
+#main_container{
     position: relative;
-    height: 90vh;
+    width: 90%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-right: 50px;
+    /* background-color: aqua; */
 }
 
 .isi_artikel{
-    position: relative;
-    width: 76%;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
+    width: 1176px;
+    height: 442px;
 }
 
 .isi_artikel h1{
@@ -363,12 +404,6 @@ img[src="src/Rectangle.png"]{
     height: 24px;
 }
 
-.paragraph{
-    height: 516px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
 .isi_artikel p{
     font-style: normal;
     font-weight: 600;
@@ -380,7 +415,10 @@ img[src="src/Rectangle.png"]{
 .image_div{
     display: flex;
     align-items: flex-end;
-    padding-bottom: 38px;
+    /* padding-bottom: 38px; */
+    /* width: 313px;
+    height: 480px; */
+    /* background-color: aqua; */
 }
 
 .main .container .image{
@@ -392,4 +430,21 @@ img[src="src/Rectangle.png"]{
     height: 480px;
     top: 100%;
     bottom: 10%;
+}
+
+/* scrollbar section */
+
+/* width */
+#main_container::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+#main_container::-webkit-scrollbar-track {
+    background: #5E5759;
+}
+
+  /* Handle */
+#main_container::-webkit-scrollbar-thumb {
+    background: #FF407C;
 }
